@@ -1,8 +1,11 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>Happy Birthday</title>
+
+  <!-- Viewport Penting untuk HP -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -15,25 +18,25 @@
 </head>
 
 <body 
-  style="background-image:url(https://i.pinimg.com/736x/e2/03/45/e203457161ff78a6454da7a6628168de.jpg); background-size:cover;"
-  class="flex justify-center items-center h-screen">
+  style="background-image:url(https://i.pinimg.com/736x/e2/03/45/e203457161ff78a6454da7a6628168de.jpg); background-size:cover; background-position:center;"
+  class="flex justify-center items-center min-h-screen px-4">
 
-  <!-- AUDIO (GANTI LINK LAGU SESUAI KEINGINANMU) -->
+  <!-- AUDIO -->
   <audio id="lagu" src="D4vd_-_Here_with_me_(mp3.pm).mp3" loop></audio>
 
-  <!-- KARTU -->
+  <!-- KARTU RESPONSIVE -->
   <div
     id="kartu"
-    class="bg-white px-10 py-8 border-4 border-pink-300 shadow-lg shadow-pink-300 rounded-xl text-center w-80 animate__animated animate__bounceInDown">
+    class="bg-white/95 px-8 py-12 border-4 border-pink-300 shadow-2xl shadow-pink-400 rounded-3xl text-center w-full max-w-lg animate__animated animate__bounceInDown">
 
-    <h1 class="text-3xl font-semibold">Happy Birthday</h1>
+    <h1 class="text-4xl font-semibold">Happy Birthday</h1>
 
-    <h1 class="text-4xl text-pink-500 font-bold mt-2 animate__animated animate__pulse animate__infinite">
+    <h1 class="text-4xl text-pink-500 font-bold mt-4 animate__animated animate__pulse animate__infinite">
       Kesya Alfiza Maharani 🥰
     </h1>
 
     <button 
-      class="p-2 bg-pink-600 text-white rounded mt-6 hover:bg-pink-900 transition w-full animate__animated animate__delay-1s animate__tada"
+      class="p-3 bg-pink-600 text-white rounded-lg mt-8 hover:bg-pink-900 transition w-full text-lg animate__animated animate__delay-1s animate__tada"
       onclick="ubahkartu()">
       Klik Ini Yawww!! 👇
     </button>
@@ -49,23 +52,23 @@
 
     function ubahkartu(){
 
-      // Mainkan lagu saat tombol diklik
+      // Mainkan lagu
       lagu.play();
 
-      // Efek confetti
+      // Confetti
       confetti({
-        particleCount: 150,
-        spread: 100,
+        particleCount: 180,
+        spread: 120,
         origin: { y: 0.6 }
       });
 
       // Ubah isi kartu
       kartu.innerHTML = `
-        <h1 class="text-2xl font-semibold animate__animated animate__zoomIn">
-          Selamat Ulang Tahun Kesya 🎉🥳
+        <h1 class="text-3xl font-semibold animate__animated animate__zoomIn">
+          Hai Kesya 🎉
         </h1>
 
-        <p class="mt-4 text-gray-700 animate__animated animate__fadeIn">
+        <p class="mt-6 text-gray-700 text-lg animate__animated animate__fadeIn">
           Semoga apa yang kesya impikan dan kesya ingin raih di mudahkan yahh...😊
           Semoga kesyanyaa sehat selalu jugaa,di mudahkan urusan nyaaa,dan juga maafin yah haniff cuman bisa 
           kasih hadiah semampu haniff nyaa,semoga kita bisa sama-sama terus yahh kesyaa🤗
@@ -73,12 +76,12 @@
           Menampung beban itu bersamaa🤍
         </p>
 
-        <h2 class="mt-4 font-bold text-pink-500 animate__animated animate__fadeInUp">
+        <h2 class="mt-6 font-bold text-pink-500 text-xl animate__animated animate__fadeInUp">
           - Dari : Hanif -
         </h2>
 
         <button 
-          class="p-2 bg-pink-600 text-white rounded mt-6 hover:bg-pink-900 transition w-full animate__animated animate__delay-1s animate__tada"
+          class="p-3 bg-pink-600 text-white rounded-lg mt-8 hover:bg-pink-900 transition w-full text-lg"
           onclick="refreshPage()">
           Balik Lagi 💖
         </button>
